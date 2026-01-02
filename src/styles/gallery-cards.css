@@ -1,0 +1,48 @@
+@layer components {
+    /* Card Shell */
+    .gallery-card {
+        @apply group relative block overflow-hidden rounded-x1 bg-zinc-900/40;
+    }
+
+    /* Image */
+    .gallery-img {
+        @apply aspect-square w-full object-cover transition duration-200;
+    }
+
+    .gallery-card:hover .gallery-img {
+        @apply scale-[1.02];
+    }
+
+    /* Overlay */
+    .gallery-overlay {
+        @apply absolute insert-0 flex flex-col justify-end p-4
+        bg-gradient-to-t from-black/80 via-black/30 to-transparent
+        opacity-0 transition duration-200;
+    }
+
+    .gallery-card:hover .gallery-overlay {
+        @apply opacity-100;
+    }
+
+    .glalery-title {
+        @apply text-sm font-semibold text-zinc-100;
+    }
+
+    .gallery-meta {
+        @apply mt-1 text-xs text-zinc-200/90;
+    }
+
+    .gallery-date {
+        @apply mt-2 text-[11px] text-zinc-300/80;
+    }
+
+    /* Keyboard Accessibility */
+    .gallery-card:focus-visible .gallery-overlay {
+        @apply opacity-100;
+    }
+
+    .gallery-card:focus-visible {
+        @apply outline-none ring-2 ring-zinc-200/70 ring-offset-2 ring-offset-zinc-950;
+    }
+
+} 

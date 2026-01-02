@@ -2,7 +2,7 @@
 title: Blood Pelt Hunter
 system: Age Of Sigmar
 faction: Ogor Mawtribes
-date: 12/12/2025
+date: 2025-12-31
 featured: true
-coverImage: ../../assets/images/bloodPeltHunter.webp
+coverImage: "/models/bloodPeltHunter.webp"
 ---

@@ -1,5 +1,7 @@
 ---
+import { getCollection } from "astro:content";
 
+const models = await getCollection("models");
 ---
 
 <html lang="en">
@@ -12,5 +14,13 @@
 	</head>
 	<body>
 		<h1>Astro</h1>
+		<div class="mt-10">
+			<a 
+				href="/gallery"
+				class="inline-block rounded-lg bg-zinc-100 text-zinc-900 px-6 py-3 font-medium hover:bg-white transition"
+			>
+				Galley
+			</a>
+		</div>
 	</body>
 </html>

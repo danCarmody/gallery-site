@@ -1,0 +1,36 @@
+---
+import { getCollection } from "astro:content";
+import "../styles/global.css";
+
+const models = await getCollection("models");
+const sorted = models.sort(
+    (a,b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime()?? 0)
+);
+
+const dateFormatted = (d) => d ? new Intl.DateTimeFormat("en-US", { year:"numeric", month:"short", day:"2-digit"}).format(d) : "";
+---
+
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    {sorted.map((model) => (
+        <a href={`/models/{$model.slug}`} class="gallery-card">
+            <img 
+                src={model.data.coverImage}
+                alt={model.data.title}
+                loading="lazy"
+                class="gallery-img"
+                />
+
+            <div class="gallery-overlay">
+                <div class="gallery-title">{model.data.title}</div>
+
+                <div class="gallery-meta">
+                    {[model.data.faction, model.data.system].filter(Boolean).join(" - ")}
+                </div>
+
+                {model.data.date && (
+                    <div class="gallery-date">{dateFormatted(model.data.date)}</div>
+                )} 
+            </div>
+        </a>
+    ))}
+</div>
