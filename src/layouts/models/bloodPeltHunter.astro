@@ -35,7 +35,7 @@ const { Content } = await model.render();
                 class="rounded-2x1 mt-8 w-full"
             />
 
-            {model.data.galleryImage?.length > 0 && (
+            {model.data.galleryImages?.length > 0 && (
                 <div class="grid grid-cols-2 gap-4 mt-6">
                     {model.data.galleryImage(((img) => (
                         <img src={img} alt=" " class="rounded-x1" loading="lazy" />

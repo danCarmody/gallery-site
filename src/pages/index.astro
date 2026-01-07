@@ -1,26 +1,11 @@
 ---
 import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/baseLayout.astro";
 
 const models = await getCollection("models");
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-		<div class="mt-10">
-			<a 
-				href="/gallery"
-				class="inline-block rounded-lg bg-zinc-100 text-zinc-900 px-6 py-3 font-medium hover:bg-white transition"
-			>
-				Galley
-			</a>
-		</div>
-	</body>
-</html>
+<BaseLayout>
+	<h1>Welcome To My Gallery</h1>
+	
+</BaseLayout>

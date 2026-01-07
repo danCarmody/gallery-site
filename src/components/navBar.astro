@@ -1,0 +1,27 @@
+---
+const navItems = [
+    {label: "Home", href:"/"},
+    {label: "Gallery", href:"/gallery"},
+    {label: "Events", href:"/events"}
+];
+
+const currentPath = Astro.url.pathname;
+const isActive = (href) => currentPath === href;
+---
+
+<nav class="sticky top-0 z-50 border-b border-zinc-800 bg-zinc-950/80 backdrop-blur">
+    <div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
+        <a href="/" class="font-semibold tracking-tight text-zinc-100">
+           Model Gallery
+        </a>
+        <div class="flex items-center gap-6 text-sm">
+            {navItems.map((item) => (
+                <a href={item.href} 
+                class={isActive(item.href) ? "text-zinc-100" : "text-zinc-400 hover:text-zinc-100 transition"}>
+                    {item.label}
+                </a>
+            ))}
+        </div>
+    </div>
+</nav>
+

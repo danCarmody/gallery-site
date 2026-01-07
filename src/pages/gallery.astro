@@ -10,7 +10,6 @@ const sorted = models.sort(
 const dateFormatted = (d) => d ? new Intl.DateTimeFormat("en-US", { year:"numeric", month:"short", day:"2-digit"}).format(d) : "";
 ---
 <BaseLayout title="Gallery">
-    <main class="max-w-6xl mx-auto px-6 py-12">
         <h1 class="text-3xl font-semibold mb-8">Gallery</h1>
         <!---------------------------------------------------------------->
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -37,5 +36,4 @@ const dateFormatted = (d) => d ? new Intl.DateTimeFormat("en-US", { year:"numeri
                 </a>
             ))}
         </div>
-    </main>
 </BaseLayout>

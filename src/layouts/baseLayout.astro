@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import NavBar from "../components/navBar.astro";
 
 const {
     title = "Painting Gallery",
@@ -12,11 +13,14 @@ const {
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial scale=1"/>
 
-        {title}
+        <title>{title}</title>
         <meta name="descirption" content={description} />
     </head>
 
     <body class="bg-zinc-900 text-zinc-100 antialiased">
-        <slot />
+        <NavBar />
+        <main class="max-w-6xl mx-auto px-6 py-12">
+            <slot />
+        </main>
     </body>
 </html>
