@@ -1,7 +1,7 @@
 @layer components {
     /* Card Shell */
     .gallery-card {
-        @apply group relative block overflow-hidden rounded-x1 bg-zinc-900/40;
+        @apply relative block overflow-hidden rounded-xl bg-zinc-900/40;
     }
 
     /* Image */
@@ -15,7 +15,7 @@
 
     /* Overlay */
     .gallery-overlay {
-        @apply absolute insert-0 flex flex-col justify-end p-4
+        @apply absolute inset-0 flex flex-col justify-end p-4
         bg-gradient-to-t from-black/80 via-black/30 to-transparent
         opacity-0 transition duration-200;
     }
@@ -24,7 +24,7 @@
         @apply opacity-100;
     }
 
-    .glalery-title {
+    .gallery-title {
         @apply text-sm font-semibold text-zinc-100;
     }
 

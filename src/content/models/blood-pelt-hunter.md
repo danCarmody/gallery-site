@@ -5,4 +5,7 @@ faction: Ogor Mawtribes
 date: 2025-12-31
 featured: true
 coverImage: "/models/bloodPeltHunter.webp"
+galleryImages:
+    - "/models/bloodPeltHunter.webp"
+    - "/models/OgorTyrantBack.webp"
 ---
