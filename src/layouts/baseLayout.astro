@@ -1,0 +1,22 @@
+---
+import "../styles/global.css";
+
+const {
+    title = "Painting Gallery",
+    description = "Minature painting gallery for Warhammer, Trench Crusade, and more."
+} = Astro.props;
+---
+<!Doctype=html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial scale=1"/>
+
+        {title}
+        <meta name="descirption" content={description} />
+    </head>
+
+    <body class="bg-zinc-900 text-zinc-100 antialiased">
+        <slot />
+    </body>
+</html>
