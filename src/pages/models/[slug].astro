@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import "../../styles/global.css"
 
 export async function getStaticPaths() {
     const models = await getCollection("models");
@@ -8,11 +9,10 @@ export async function getStaticPaths() {
         params: {slug: model.slug},
         props: {model}
     }));
+}
 
     const { model } = Astro.props;
     const { Content } = await model.render();
-}
-
 ---
 <html lang="en">
     <head>
