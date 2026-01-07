@@ -12,7 +12,7 @@ const dateFormatted = (d) => d ? new Intl.DateTimeFormat("en-US", { year:"numeri
 
 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
     {sorted.map((model) => (
-        <a href={`/models/{$model.slug}`} class="gallery-card">
+        <a href={`/models/${model.slug}`} class="gallery-card">
             <img 
                 src={model.data.coverImage}
                 alt={model.data.title}
