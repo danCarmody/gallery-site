@@ -5,6 +5,8 @@
   "scripts": {
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
+    "test:unit": "vitest run",
+    "test:unit:watch": 
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
