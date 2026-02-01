@@ -6,7 +6,7 @@
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
     "test:unit": "vitest run",
-    "test:unit:watch": 
+    "test:unit:watch": "vitest",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
@@ -19,6 +19,6 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.57.0",
-    "vitest": "^4.0.16"
+    "vitest": "^4.0.17"
   }
 }
